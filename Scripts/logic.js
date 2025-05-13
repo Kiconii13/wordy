@@ -117,7 +117,7 @@ inputField.addEventListener("input", () => {
 startBtn.addEventListener("click", startGame);
 
 async function getLeaderboard() {
-    const res = await fetch("http://localhost:3000/leaderboard");
+    const res = await fetch("https://wordy-bu5l.onrender.com/leaderboard");
     const data = await res.json();
     return data
         .map(entry => {
@@ -166,7 +166,7 @@ saveNameBtn.onclick = async () => {
     const name = playerNameInput.value.trim() || "Nepoznat";
     const { wpm, date } = pendingScore;
 
-    await fetch("http://localhost:3000/leaderboard", {
+    await fetch("https://wordy-bu5l.onrender.com/leaderboard", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, wpm, date })
