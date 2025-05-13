@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Igra Brzog Kucanja</title>
+    <link rel="stylesheet" href="Style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<h1>Igra Brzog Kucanja</h1>
+<div id="wordDisplay">Pritisni Start</div>
+<input type="text" id="inputField" autocomplete="off" autocorrect="off" spellcheck="false" disabled placeholder="Kucaj ovde...">
+<br>
+<button id="startBtn">Start</button>
+<div id="score">Poeni: 0</div>
+<div id="timer">Vreme: 0.0s</div>
+<div id="wpm">WPM: 0</div>
+
+<h2>Leaderboard</h2>
+<ol id="leaderboard"></ol>
+
+<!-- Modal za unos imena -->
+<div id="nameModal" class="modal hidden">
+    <div class="modal-content">
+        <p>Čestitamo! Ušao si u top 5!</p>
+        <label for="playerName">Unesi ime:</label>
+        <input type="text" id="playerName" maxlength="20">
+        <button id="saveNameBtn">Sačuvaj</button>
+    </div>
+</div>
+
+<script src="Scripts/logic.js"></script>
+</body>
+</html>
